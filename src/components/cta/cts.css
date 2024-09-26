@@ -1,0 +1,14 @@
+.support-card-container {
+  perspective: 1000px;
+}
+
+.cta26-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cta26-actions {
+  display: flex;
+  justify-content: flex-end;
+}

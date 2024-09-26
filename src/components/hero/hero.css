@@ -1,0 +1,25 @@
+/* hero.css */
+
+/* Hide scrollbar for the slider */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Optional: Add smooth scroll behavior */
+  .image-slider {
+    scroll-behavior: smooth;
+  }
+  
+  /* Add animation if needed */
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

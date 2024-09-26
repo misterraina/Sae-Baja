@@ -1,0 +1,4 @@
+/* // Add this CSS in your global styles (e.g., index.css or Tailwind configuration) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

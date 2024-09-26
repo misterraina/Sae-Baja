@@ -1,0 +1,30 @@
+/* Card styles */
+.card {
+    background-color: #e0e0e0; /* bg-bgLight-400 */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* transition-colors duration-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1rem; /* p-4 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add some depth */
+    height: 35vh;
+    width: 45vw;
+  }
+  
+  /* Background cardz styles */
+  .cardz {
+    background-color: #000; /* Background color */
+    transition: transform 0.3s ease;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Depth for the background card */
+    height: 35vh;
+    width: 45vw;
+  }
+  
+  /* Rotate on hover for both card and cardz */
+  .hover-trigger:hover .card {
+    transform: rotate(5deg) translateY(-10px); /* Slight upward movement with rotation */
+  }
+  
+  .hover-trigger:hover .cardz {
+    transform: rotate(-5deg) translateY(10px); /* Slight downward movement with opposite rotation */
+  }
+  

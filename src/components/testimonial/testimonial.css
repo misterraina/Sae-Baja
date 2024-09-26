@@ -1,0 +1,28 @@
+/* Card styles */
+.cardT {
+    position: relative;
+    z-index: 10;
+    width: 100%; 
+    height: auto; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.028); /* Optional shadow for card depth */
+}
+
+
+.cardzT {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    width: 100%; /* Same width as .cardT */
+    height: 100%; /* Same height as .cardT */
+    z-index: 0; /* Behind the card */
+}
+
+/* Hover effects for rotation */
+.relative:hover .cardT {
+    transform: rotate(-2deg);
+}
+
+.relative:hover .cardzT {
+    transform: rotate(2deg);
+}
