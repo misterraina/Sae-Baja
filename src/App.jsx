@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar/Navbar'
 import Hero from './components/hero/Hero'
 import Features from './components/features1/Features'
 import Cta from './components/cta/Cta'
@@ -9,7 +9,7 @@ import Testimonial from './components/testimonial/Testimonial'
 import Steps from './components/steps/Steps'
 import Contact from './components/contact/Contact'
 import Footer from './components/footer/Footer'
-import ImageSlider from './components/extra/Extra'
+import Featuress from './components/featuress/Featuress'
 
 
 function App() {
@@ -26,12 +26,12 @@ function App() {
     <Navbar/>
     <Hero/>
     <Features/>
+    <Featuress/>
     <Cta/>
     <Features2/>
     <Steps/>
     <Testimonial/>
     <Contact/>
-    {/* <ImageSlider images={images} interval={5000} /> */}
     <Footer/>
    </div>
   )

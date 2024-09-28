@@ -1,25 +1,74 @@
-/* hero.css */
+/* Auto Scrolling Animation */
+@keyframes seamlessScroll {
+  0% {
+    transform: translateX(0%); 
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
-/* Hide scrollbar for the slider */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
+@keyframes seamlessScroll2 {
+  0% {
+    transform: translateX(-50%); 
   }
-  .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  100% {
+    transform: translateX(0%);
   }
-  
-  /* Optional: Add smooth scroll behavior */
-  .image-slider {
-    scroll-behavior: smooth;
-  }
-  
-  /* Add animation if needed */
-  @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
+}
+
+/* Lower Portion - Image Slider */
+.content-2 {
+  width: 100%;
+  position: relative;
+  overflow: hidden; 
+}
+
+.content-2::before,
+.content-2::after{
+  position: absolute;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.content-2::after{
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.content-2::before{
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.image-slider {
+  display: flex;
+  width: max-content; /* Double the width to fit both sets of images */
+  animation: seamlessScroll 20s linear infinite; 
+  animation-play-state: running;
+}
+
+.image-slider2 {
+  display: flex;
+  width: max-content; 
+  animation: seamlessScroll2 20s linear infinite; 
+  animation-play-state: running;
+}
+
+.image-slider:hover,
+.image-slider2:hover {
+  animation-play-state: paused; 
+}
+
+.image-slider img,
+.image-slider2 img {
+  flex-shrink: 0;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin: 16px 0px 0px 16px;
+  border-radius: 8px;
+}

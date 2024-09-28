@@ -7,20 +7,12 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      keyframes: {
-        marquee: {
-          '0%': {transform: 'translateX(100%)'},
-          '100%': {transform: 'translateX(-100%)'}
-        }
-      },
-      animation:{
-        marquee: 'marquee 9s linear infinite',
-      },
       borderWidth: {
         '1': '1px',
       },
       colors: {
-        orange: {
+        orang: {
+          100: "#e75104",
           500: '#D97706',
           600: '#B45309',
         },
