@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './cts.css'; // External CSS for zoom effect
-import payimg from '../../assets/payScan.jpeg'; // Assuming this is your scanner image
-import DonationForm from '../DonationForm'; // Importing the DonationForm component
+import './cts.css'; 
+import payimg from '../../assets/payScan.jpeg'; 
+import DonationForm from './DonationForm'; 
 
 const Cta = () => {
   const [showForm, setShowForm] = useState(false);
