@@ -2,12 +2,12 @@ import React from "react";
 
 export default function Steps() {
   return (
-    <div className="max-w-full m-20 flex">
+    <div className="max-w-full p-20 flex dark:bg-dark-600">
       <div className="w-1/2">
-        <h1 className="font-extrabold text-3xl font-serif">
+        <h1 className="font-extrabold text-3xl font-serif dark:text-dark-200">
           Discuss the Power of Our product
         </h1>
-        <p className="text-gray-600 pt-4 text-lg">
+        <p className="text-gray-600 pt-4 text-lg dark:text-dark-200">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos
           voluptatem suscipit aut fuga ut sunt, placeat voluptas! Mollitia
           aperiam soluta voluptate asperiores molestias aliquam at. Ducimus

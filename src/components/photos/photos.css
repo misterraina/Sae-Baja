@@ -1,0 +1,87 @@
+/* Auto Scrolling Animation */
+@keyframes seamlessScroll {
+    0% {
+      transform: translateX(0%); 
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes seamlessScroll2 {
+    0% {
+      transform: translateX(-50%); 
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  /* Lower Portion - Image Slider */
+  .content-2 {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+  }
+  
+  .content-2::before,
+  .content-2::after{
+    position: absolute;
+    top: 0;
+    width: 15px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  /* Light mode (default) */
+  .content-2::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    /* background: red; */
+  }
+  
+  .content-2::before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  /* Dark mode */
+  .dark .content-2::after {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), #3C3D37); /* Dark mode background */
+  }
+  
+  .dark .content-2::before {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), #3C3D37); /* Dark mode background */
+  }
+  
+  
+  .image-slider {
+    display: flex;
+    width: max-content; /* Double the width to fit both sets of images */
+    animation: seamlessScroll 20s linear infinite; 
+    animation-play-state: running;
+  }
+  
+  .image-slider2 {
+    display: flex;
+    width: max-content; 
+    animation: seamlessScroll2 20s linear infinite; 
+    animation-play-state: running;
+  }
+  
+  .image-slider:hover,
+  .image-slider2:hover {
+    animation-play-state: paused; 
+  }
+  
+  .image-slider img,
+  .image-slider2 img {
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin: 16px 0px 0px 16px;
+    border-radius: 8px;
+  }
+  

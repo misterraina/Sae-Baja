@@ -1,14 +1,29 @@
-.support-card-container {
-  perspective: 1000px;
+/* Initial transform effect for the .one element */
+.one {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg);
+  transition: transform 0.3s ease-in-out;
 }
 
-.cta26-content {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+/* Hover effect for the .two element */
+.two {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(-2deg) skew(0deg, 0deg);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.cta26-actions {
-  display: flex;
-  justify-content: flex-end;
+/* Initial transform for .three */
+.three {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(1deg) skew(0deg, 0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect to rotate the .three element */
+.zero:hover  .three {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+/* Zoom effect on the .zero element */
+.zero {
+  transition: transform 0.3s ease-in-out;
 }
