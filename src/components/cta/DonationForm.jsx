@@ -1,6 +1,6 @@
 import React from 'react';
 import payImg from '../../assets/payScan.jpeg';
-import closeImg from '../../assets/closeSymbol.png'; // Assuming this is the close (cross) image
+import closeImg from '../../assets/CloseSymbol.png'
 
 const DonationForm = ({ handleCloseForm }) => {
   return (
