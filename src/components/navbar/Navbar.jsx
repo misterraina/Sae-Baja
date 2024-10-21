@@ -6,6 +6,7 @@ export default function Navbar() {
   const goToLink = () => {
     window.location.href = '/team'; // Replace with your desired link
   };
+  
   return (
     <div className="flex justify-between items-center w-full px-10 py-4 top-0 left-0 z-50 fixed dark:bg-dark-800 bg-white">
 
