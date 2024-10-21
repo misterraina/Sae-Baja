@@ -1,6 +1,6 @@
 import React from "react";
 import './hero.css';
-import bgPhoto from '../../assets/orLanding.webp'
+// import bgPhoto from '../../assets/orLanding.webp'
 
 export default function Hero() {
 

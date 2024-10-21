@@ -26,9 +26,23 @@ export default function Featuress() {
             onClick={() => handleImageChange(img1, "Lottery")}
           >
             <h1 className="text-3xl font-semibold dark:text-dark-200">College</h1>
-            <p className="dark:text-dark-200">Shri Mata Vaishno Devi University (SMVDU) is a college
+            <p className="dark:text-dark-200">
+              {`Shri Mata Vaishno Devi University (SMVDU) is a college
                       located in Jammu, India. It is known for its engineering
-                      programs and innovative projects.</p>
+                      programs and innovative projects.`
+                .split(" ")
+                .slice(0, 40)
+                .join(" ")}{" "}
+              ...
+              <a
+                href="https://smvdu.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-500 hover:underline text-sm"
+              >
+                View More
+              </a>
+            </p>
           </div>
         </div>
 

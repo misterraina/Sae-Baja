@@ -11,7 +11,7 @@ export default function Footer() {
             <li>Contact us</li>
             <li>Gallery</li>
             <li>Blog</li>
-            <li>Competition Info</li>
+            <li> <a target='blank' href="https://www.bajasaeindia.org/">Competition Info</a></li>
         </ul>
         </div>
 
