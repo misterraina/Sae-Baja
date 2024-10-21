@@ -3,6 +3,9 @@ import Logo from "../../assets/logo.png";
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const goToLink = () => {
+    window.location.href = '/team'; // Replace with your desired link
+  };
   return (
     <div className="flex justify-between items-center w-full px-10 py-4 top-0 left-0 z-50 fixed dark:bg-dark-800 bg-white">
 
@@ -50,6 +53,7 @@ export default function Navbar() {
         <button 
           className="px-4 py-2 bg-white text-base hover:bg-gray-800 rounded-full text-orange-700 border-2 border-orange-700 font-semibold hover:text-white"
           aria-label="Meet the Team"
+          onClick={goToLink}
         >
           Meet the team
         </button>

@@ -12,7 +12,6 @@ export default {
       },
       fontFamily: {
         raleway: ['Arimo', 'sans-serif'],
-        four: 600,
       },
       colors: {
         dark:{
