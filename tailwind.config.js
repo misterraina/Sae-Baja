@@ -10,6 +10,10 @@ export default {
       borderWidth: {
         '1': '1px',
       },
+      fontFamily: {
+        raleway: ['Arimo', 'sans-serif'],
+        four: 600,
+      },
       colors: {
         dark:{
           600: "#181C14",
