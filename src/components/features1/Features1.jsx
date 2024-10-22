@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import img1 from "../../assets/orCarModel.png";
+// import img1 from "../../assets/imgcar.webp";
 import img2 from "../../assets/orTeam.jpg";
 
 const img3 =
