@@ -1,28 +1,51 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./hero.css";
 import imag from "../../assets/pngCrawler.png";
 
 export default function Hero() {
+  const textElementRef = useRef(null);
+  const rightTopRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      if (textElementRef.current) {
+        textElementRef.current.style.animation = scrollY > 50 ? 'slide-out-left 1s forwards' : 'slide-in-left 1s forwards';
+      }
+
+      if (rightTopRef.current) {
+        rightTopRef.current.style.animation = scrollY > 50 ? 'slide-out-right 1s forwards' : 'slide-in-right 1s forwards';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div className="hero-background h-screen dark:bg-dark-600 px-0 overflow-hidden relative">
-        <div className="rightTop absolute top-16 right-0 pt-4 mr-0">
-          <img 
+      <div className="rightTop absolute top-16 right-0 pt-4 mr-0" ref={rightTopRef}>
+        <img 
           src={imag}
           alt="" 
           className="h-52 w-72" />
-        </div>
-      <div className="textElement mb-6 pb-2 mx-20 mt-40 pt-8">
-        <h1 className="textH text-5xl text-center dark:text-dark-200 font-Arimo font-semibold text-gray-200 mb-4">
+      </div>
+      <div className="textElement mb-6 pb-2 mx-20 mt-40 pt-8" ref={textElementRef}>
+        <h1 className="textH text-5xl text-center dark:text-dark-200 font-Arimo font-semibold text-gray-800 mb-4">
           SMVDU Electrical Vehicle Team
         </h1>
-        <p className=" textP text-2xl text-gray-400 mx-20 my-6">
+        <p className=" textP text-2xl text-gray-900 mx-20 my-6">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
           maxime nostrum quia eum explicabo et voluptas laborum nemo laboriosam
           inventore perferendis, in consectetur itaque? Reiciendis animi,
           perspiciatis accusamus quaerat recusandae repellat impedit Lorem ipsum
           dolor sit amet consectetur adipisicing elit. Vel molestiae tempore
           architecto earum tenetur obcaecati quis sapiente mollitia ab
-          pariatur!lorem Lorem ipsum dolor sit amet consectetur adipisicing. .
+          pariatur! lorem Lorem ipsum dolor sit amet consectetur adipisicing.
         </p>
       </div>
 
@@ -39,6 +62,7 @@ export default function Hero() {
     </div>
   );
 }
+
 
 {
   /* <div className="flex space-x-4 mb-14 mt-2">

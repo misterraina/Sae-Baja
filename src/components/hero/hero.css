@@ -8,46 +8,67 @@
   position: relative;
 }
 
-.hero-background::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.72); /* Adjust transparency as needed */
-  z-index: 1;
+/* Sliding in from left */
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.textElement{
+/* Sliding in from right */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Sliding out to left */
+@keyframes slide-out-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Sliding out to right */
+@keyframes slide-out-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.textElement {
   position: relative;
   z-index: 2;
-  background: #000000c9;
+  background: #ffffffc9;
   border-radius: 60px 0px 40px 0px;
-  border-left:solid orangered 3px ;
-  border-bottom:solid orangered 3px ;
+  border-left: solid rgba(0, 0, 53, 0.716) 3px;
+  border-bottom: solid rgba(0, 0, 53, 0.722) 3px;
+  animation: slide-in-left 1s forwards; /* Slide in from left */
 }
 
-.textElement2{
-  position: relative;
-  z-index: 2;
-  /* border-radius: 20px 0px 20px 0px; */
-}
-
-.textH {
-  color: #ffffff; /* White text for the title */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle text shadow for readability */
-}
-
-.textP {
-   /* White text for paragraphs */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Subtle text shadow */
-  z-index: 4;
-}
-
-.rightTop{
+.rightTop {
   z-index: 3;
-
+  animation: slide-in-right 1s forwards; /* Slide in from right */
 }
 
 /* Infinite right-to-left scrolling styles at the bottom */
@@ -95,3 +116,4 @@
     background-color: #e75104; /* Dark background in dark mode */
   }
 }
+  
