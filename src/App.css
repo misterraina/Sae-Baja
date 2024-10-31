@@ -1,0 +1,8 @@
+.parallax{
+    background: url("./assets/100.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* padding: 100px 0; Adjust as needed */
+}

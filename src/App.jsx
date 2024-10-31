@@ -34,8 +34,10 @@ function App() {
               <Featuress />
               <Cta />
               <Features2 />
+              <div className="parallax">
               <Steps />
               <Testimonial />
+              </div>
               <Photos />
               <Contact />
               <Footer />

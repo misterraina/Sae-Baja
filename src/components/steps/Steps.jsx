@@ -1,8 +1,9 @@
 import React from "react";
+import './steps.css'
 
 export default function Steps() {
   return (
-    <div className="max-w-full p-20 flex dark:bg-dark-600">
+    <div className="steps max-w-full p-20 flex dark:bg-dark-600">
       <div className="w-1/2">
         <h1 className="font-extrabold text-3xl font-serif dark:text-dark-200">
           Discuss the Power of Our product
